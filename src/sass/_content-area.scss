@@ -1,0 +1,312 @@
+#content-area{
+    overflow: auto;
+    width: 100%;
+    min-height: 100%;
+}
+
+#filter{
+    background: $grey;
+    width: 30%;
+    max-width: 300px;
+    display: inline-block;
+    float: left;
+
+    .inside{
+        padding: 20px;
+        max-width: 300px;
+    }
+    h4{
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        font-weight: 500px;
+        text-transform: uppercase;
+    }
+
+    select{
+        background: transparent;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1b1b1b;
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .filters {
+        .title {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            color: $darkgrey;
+        }
+        input[type="text"] {
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: 0.4rem;
+            width: 45%;
+            display: inline-block;
+            margin-right: 2.5%;
+            margin-bottom: 1rem;
+        }
+
+        &.extras {
+            label {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+                input[type="checkbox"]{
+                    float:right;
+
+                }
+            }
+        }
+    }
+}
+#listings{
+    width: 70%;
+    float: left;
+    display: inline-block;
+    padding: 15px;
+    background: $offwhite;
+    .search-area{
+        input[type="text"]{
+            width: 70%;
+            background:transparent;
+            color: $darkgrey;
+            font-size: 2rem;
+            border: none;
+            border-bottom: 1px solid $darkgrey;
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+    }
+
+    .sortby-area{
+        margin-bottom: 20px;
+
+        .results{
+            font-size: .8rem;
+            color: $darkgrey;
+            display: inline-block;
+        }
+        .sort-options{
+            float: right;
+            select{
+                font-size: .9rem;
+                font-weight: 300;
+                border: 1px solid $lightgrey;
+                background:transparent;
+                display:inline-block;
+                margin-right: 15px;
+                vertical-align: middle;
+            }
+            .view {
+                display: inline-block;
+                
+                .fa{
+                    margin-right: 15px;
+                    display: inline-block;
+                }
+            }
+            
+        }
+    }
+
+    .listings-results{
+        margin-bottom: 60px;
+
+        .listing{
+            background:#fff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+            -moz-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+            box-shadow: 0px 9px 54px -4px rgba(224,224,224,1); 
+        }
+        .listing-image{
+            color: white;
+            padding: 15px;
+            position: relative;
+            background: 
+            url("https://ycdn.space/h/2018/12/003-modena-55-metricon-1050x733.webp") no-repeat 
+            center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 200px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            &:hover{
+                .details{
+                    opacity:1;
+                }
+                .address{
+                    opacity: 0;
+                }
+            }
+            .address{
+                position: absulute;
+                font-size: 1.1rem;
+                bottom: 20px;
+                opacity: 1;
+                transition: all .4s ease-in-out;
+                text-shadow: 0px 1px 4px rgba(91, 91, 91, 1);
+            }
+
+            .details {
+                transition: all .4s ease-in-out;
+                opacity: 0;
+                padding: 30px;
+                position: absolute;
+                top:0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3869ff+0,a149ff+100 */
+                background: rgba(56,105,255,.8); /* Old browsers */
+                background: -moz-linear-gradient(-45deg,  rgba(56,105,255,.8) 0%, rgba(161,73,255,.8) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg,  rgba(56,105,255,.8) 0%,rgba(161,73,255,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg,  rgba(56,105,255,.8) 0%,rgba(161,73,255,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3869ff', endColorstr='#a149ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+                .user-img{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    display: inline-block;
+                    background: 
+                    url("https://ycdn.space/h/2018/12/003-modena-55-metricon-1050x733.webp") no-repeat 
+                    center center; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+
+                .user-details{
+                    vertical-align: top;
+                    display: inline-block;
+
+                    .user-name{
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                        display: block;
+                        color: rgba(255,255,255,1);
+                        margin-top: 4px;
+                        margin-bottom: 5px;
+                    }
+                    .post-date{
+                        display: block;
+                        color: rgba(255,255,255,.7);
+                        font-size: 0.9rem;
+                    }
+                }
+                .listing-details{
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+
+                    .fa{
+                        display: inline-block;
+                        font-size: 20px;
+                        margin-right: 15px;
+                    }
+                    span{
+                        font-weight: 300;
+                        font-size: 0.8rem;
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        top: 3px;
+                    }
+                    .floor-space{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .bottom-info{
+            padding: 20px 15px;
+            .price{
+                font-size: 1rem;
+                display: block;
+                margin-bottom: 10px;
+                color: $darkgrey;
+            }
+            .location{
+                font-size: 1.3rem;
+                display: block;
+                color: $lightgrey;
+            }
+        }
+    }
+}
+
+.view-btn{
+    background:black;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    max-width: 150px;
+    transition: background .2s ease-in-out;
+    &:hover{
+        background:$pink;
+        cursor: pointer;
+    }
+}
+
+#pagination{
+    text-align: center;
+    .pages{
+        margin: 0 auto;
+        background: white;
+        display: inline-block;
+        -webkit-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+        -moz-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+        box-shadow: 0px 9px 54px -4px rgba(224,224,224,1); 
+        li{
+            display: inline-block;
+            padding: 20px 30px;
+            &.active,
+            &:hover{
+                color:white;
+                font-weight: 700;
+                background: $pink;
+                cursor: pointer;
+            }
+        }
+    }
+}
+    
+
+.col-md-3{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+}
+
+.col-md-9{
+    width: 75%;
+    display: inline-block;
+}
+
+.col-lg-6{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+}
