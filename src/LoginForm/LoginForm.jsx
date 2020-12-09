@@ -31,7 +31,7 @@ const LoginForm = ({
           primary={true}
           type="submit"
           label="submit"
-          href="/seainfo6150-final-project-webapp"
+          href="/home"
         />
       </form>
     </div>
