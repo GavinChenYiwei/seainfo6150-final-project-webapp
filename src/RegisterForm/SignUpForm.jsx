@@ -36,7 +36,7 @@ const SignUpForm = ({
           primary={true}
           type="submit"
           label="submit"
-          href="/"
+          href="/seainfo6150-final-project-webapp"
         />
       </form>
       <p>
