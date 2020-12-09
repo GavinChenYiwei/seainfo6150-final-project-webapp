@@ -3,7 +3,11 @@ import { Switch, Route, Link } from "react-router-dom";
 import Filter from './Filter.js'
 import Listings from './Listings.js'
 import listingsData from './data/listingsData.js'
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import SignUpContainer from "./RegisterForm/SignUpContainer.jsx";
 import './sass/main.scss'
+import LoginContainer from "./LoginForm/LoginContainer.jsx";
+
 
 class App extends Component {
   constructor () {
@@ -24,7 +28,7 @@ class App extends Component {
       filteredData: listingsData,
       populateFormsData: '',
       sortby: 'price-dsc',
-      view: 'long'
+      view: 'box'
     }
 
     this.change = this.change.bind(this)
@@ -126,7 +130,8 @@ class App extends Component {
   }
 
   render () {
-    return (<div> 
+    return (
+    <div> 
       <header>
         <Link className="logo" to="/"> Logo</Link>
         <nav>
@@ -136,11 +141,22 @@ class App extends Component {
           <Link to="/register" className="register-btn">Register</Link>
         </nav>
       </header>
-      <Switch path="/">
-        <section id="content-area">
+      <Switch>
+        <Route path="/" exact render={() => 
+         <section id="content-area">
           <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
           <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state}/>
-        </section>
+        </section>} />
+        <Route path="/register" exact render={() => 
+          <MuiThemeProvider>
+            <SignUpContainer />
+          </MuiThemeProvider>
+        } />
+        <Route path="/login" exact render={() => 
+          <MuiThemeProvider>
+            <LoginContainer />
+          </MuiThemeProvider>
+        } />
       </Switch>
     </div>)
   }

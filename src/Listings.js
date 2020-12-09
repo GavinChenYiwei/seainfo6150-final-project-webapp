@@ -1,4 +1,5 @@
-import React, { Component} from 'react'
+import React, { Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Listing extends Component {
   constructor () {
@@ -17,7 +18,7 @@ export default class Listing extends Component {
     }
 
     return listingsData.map((listing, index) => {
-      if(this.props.globalState.view = 'box') {
+      if(this.props.globalState.view == 'box') {
         //This is the box view
         return (
           <div className="col-md-3" key={index}>
@@ -55,16 +56,16 @@ export default class Listing extends Component {
                 </div>
               </div>
               <div className="bottom-info">
-        <span className="price">${listing.price} / month</span>
-        <span className="location"><i className="fas fa-map-marker-alt"></i>{listing.city}, {listing.state}</span>
+          <span className="price">${listing.price} / month</span>
+          <span className="location"><i className="fas fa-map-marker-alt"></i>{listing.city}, {listing.state}</span>
+                </div>
               </div>
             </div>
-          </div>
         )
       } else {
         // This is the long view
         return (
-          <div className="col-md-12" key={index}>
+          <div className="col-md-12 col-lg-6" key={index}>
             <div className="listing">
               <div className="listing-image" style={{background: 
               `url("${listing.image}") no-repeat center center`}}>
@@ -89,22 +90,20 @@ export default class Listing extends Component {
                         <i className="fa fa-bed" aria-hidden="true"></i>
                         <span>{listing.bedrooms} bedrooms</span>
                       </div>
-                    </div> 
-
-                      <div className="view-btn">
-                        View Listing
+                      </div> 
+                        <div className="view-btn">
+                          View Listing
+                        </div>
                       </div>
+                    </div>
                   </div>
-
+                  <div className="bottom-info">
+                    <span className="price">${listing.price} / month</span>
+                    <span className="location"><i className="fas fa-map-marker-alt"></i>{listing.city}, {listing.state}</span>
+                  </div>
                 </div>
               </div>
-              <div className="bottom-info">
-        <span className="price">${listing.price} / month</span>
-        <span className="location"><i className="fas fa-map-marker-alt"></i>{listing.city}, {listing.state}</span>
-              </div>
-            </div>
-          </div>
-        )
+          )
       }
     })
   }
