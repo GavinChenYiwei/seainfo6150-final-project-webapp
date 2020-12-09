@@ -143,6 +143,11 @@ class App extends Component {
         </nav>
       </header>
       <Switch>
+        <Route path="/" exact render={() => 
+         <section id="content-area">
+          <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
+          <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state}/>
+        </section>} />
         <Route path="/home" exact render={() => 
          <section id="content-area">
           <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
