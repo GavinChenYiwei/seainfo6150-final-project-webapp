@@ -7,6 +7,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import SignUpContainer from "./RegisterForm/SignUpContainer.jsx";
 import './sass/main.scss'
 import LoginContainer from "./LoginForm/LoginContainer.jsx";
+import AboutUs from "./AboutUs/AboutUs.jsx";
 
 
 class App extends Component {
@@ -135,7 +136,7 @@ class App extends Component {
       <header>
         <Link className="logo" to="/home"> Logo</Link>
         <nav>
-          <Link to="/creatads">Create Ads</Link>
+          <a href="/home">Create Ads</a>
           <Link to="/aboutus">About Us</Link>
           <Link to="/login">Log In</Link>
           <Link to="/register" className="register-btn">Register</Link>
@@ -156,6 +157,9 @@ class App extends Component {
           <MuiThemeProvider>
             <LoginContainer />
           </MuiThemeProvider>
+        } />
+        <Route path="/aboutus" exact render={() => 
+          <AboutUs />
         } />
       </Switch>
     </div>)
