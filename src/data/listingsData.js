@@ -29,6 +29,20 @@ var listingsData = [
         'https://media.gettyimages.com/photos/modern-scandinavian-living-room-interior-3d-render-picture-id1184204517?s=2048x2048'
     },
     {
+        address: '1120 Kifer Road',
+        city: 'Mountain View',
+        state: 'CA',
+        rooms: 2,
+        price: 4000,
+        floorSpace: 1275,
+        extras: [
+            'elevator'
+        ],
+        homeType: 'House',
+        image:
+        'https://media.gettyimages.com/photos/modern-scandinavian-living-room-interior-3d-render-picture-id1184204517?s=2048x2048'
+    },
+    {
         address: '305 Elan Village Ln',
         city: 'San Jose',
         state: 'CA',
